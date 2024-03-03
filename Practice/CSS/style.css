@@ -1,14 +1,19 @@
-div{
+body{
+    display: flex;
+    justify-content: center;
+}
+.loader{
     width: 100px;
     height: 100px;
-    background-color: aqua;
-    transition-property: all;
-    transition-duration: 2s;
+    border-radius: 50%;
+    border: 5px solid black;
+    border-top: 5px solid red;
+    animation: spinanimation 3s ease-in-out 0s infinite normal;
 }
-div:hover{
-    background-color: red;
-    font-size: 20px;
-}
-div:active{
-    background-color: green;
+@keyframes spinanimation{
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
 }
